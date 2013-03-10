@@ -4,9 +4,10 @@ CoreSEO
 Description
 -----------
 
-CoreSEO is an extension to Spree, the Ruby on Rails-based shopping cart system.  CoreSEO adds the following additional SEO features to a Spree site:
+This is a fork of the original CoreSEO Spree extension, updated to support more recent versions of Spree.
 
-* Sitemap generation thanks to @stephskardal's spree-sitemaps here: github.com/stephskardal/spree-sitemaps, with added bonus product images in the xml view
+CoreSEO adds the following additional SEO features to a Spree site:
+
 * Added Homepage title and meta tag overrides
 * Added ability to customize title and meta tags for taxon pages
 * Added ability to customize title tags for product pages
@@ -15,10 +16,5 @@ CoreSEO is an extension to Spree, the Ruby on Rails-based shopping cart system. 
 NOTE:
 -----
 
-CoreSEO extension has only been tested on Spree 0.11.x
-
-TODO:
------
-
-* bolding keywords sitewide
-* 0.4.x upgrades
+  This extension has been tested on Spree 1.3.x, but should work on Spree 1.2 and above.  Sitemap
+  generation has been removed in favor of using other sitemap extensions.
