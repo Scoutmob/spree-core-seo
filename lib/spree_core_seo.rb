@@ -1,5 +1,4 @@
 require 'spree_core'
-require 'core_seo_hooks'
 
 module SpreeCoreSeo
   class Engine < Rails::Engine

@@ -1,0 +1,6 @@
+<% if f.object.has_attribute? :title_tag %>
+  <%= f.field_container :title_tag do %>
+    <%= f.label :title_tag, t(:title_tag) %>
+    <%= f.text_field :title_tag, :class => 'fullwidth' %>
+  <% end %>
+<% end %>
