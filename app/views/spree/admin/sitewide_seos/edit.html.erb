@@ -1,0 +1,41 @@
+<%= render :partial => 'spree/admin/shared/configuration_menu' %>
+
+<% content_for :page_title do %>
+  <%= t(:sitewide_seo) %>
+<% end %>
+
+<%= form_tag(admin_sitewide_seo_path, :method => :put) do %>
+  <div id="preferences" data-hook>
+
+    <fieldset class="sitewide-seo no-border-top">
+      <div class="field">
+        <%= label_tag('preferences[homepage_title]', t('homepage_title') + ': ') %><br>
+        <%= text_field_tag('preferences[homepage_title]', Spree::Config[:homepage_title], :class => 'fullwidth') %>
+      </div>
+
+      <div class="field">
+        <%= label_tag('preferences[homepage_meta_keywords]', t('homepage_meta_keywords') + ': ') %><br>
+        <%= text_field_tag('preferences[homepage_meta_keywords]', Spree::Config[:homepage_meta_keywords], :class => 'fullwidth') %>
+      </div>
+
+      <div class="field">
+        <%= label_tag('preferences[homepage_meta_description]', t('homepage_meta_description') + ': ') %><br>
+        <%= text_field_tag('preferences[homepage_meta_description]', Spree::Config[:homepage_meta_description], :class => 'fullwidth') %>
+      </div>
+
+      <div class="field">
+        <%= label_tag('preferences[keywords_footer]', t('keywords_for_footer') + ': ') %><br>
+        <%= text_area_tag('preferences[keywords_footer]', Spree::Config[:keywords_footer], :rows => 7, :class => 'fullwidth') %>
+      </div>
+
+      <div class="form-buttons filter-actions actions" data-hook="buttons">
+        <%= button t(:update), 'icon-refresh' %>
+        <span class="or"><%= t(:or) %></span>
+        <%= link_to_with_icon 'icon-remove', t(:cancel), edit_admin_sitewide_seo_path, :class => 'button' %>
+      </div>
+
+    </fieldset>
+
+  </div>
+
+<% end %>
