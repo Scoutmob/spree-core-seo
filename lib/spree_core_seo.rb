@@ -39,6 +39,8 @@ module SpreeCoreSeo
 
       Spree::Taxon.class_eval do
         attr_accessible :title_tag if Spree::Taxon.column_names.include?('title_tag')
+        attr_accessible :meta_keywords if Spree::Taxon.column_names.include?('meta_keywords')
+        attr_accessible :meta_description if Spree::Taxon.column_names.include?('meta_description')
       end
     end
 
