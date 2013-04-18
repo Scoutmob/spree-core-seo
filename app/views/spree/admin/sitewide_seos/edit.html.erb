@@ -24,6 +24,11 @@
       </div>
 
       <div class="field">
+        <%= label_tag('preferences[pdp_meta_description]', t('pdp_meta_description') + ': ') %><br>
+        <%= text_field_tag('preferences[pdp_meta_description]', Spree::Config[:pdp_meta_description], :class => 'fullwidth') %>
+      </div>
+
+      <div class="field">
         <%= label_tag('preferences[keywords_footer]', t('keywords_for_footer') + ': ') %><br>
         <%= text_area_tag('preferences[keywords_footer]', Spree::Config[:keywords_footer], :rows => 7, :class => 'fullwidth') %>
       </div>

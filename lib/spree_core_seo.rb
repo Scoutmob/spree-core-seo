@@ -11,6 +11,7 @@ module SpreeCoreSeo
         preference :homepage_meta_description, :string
         preference :homepage_title, :string
         preference :keywords_footer, :string
+        preference :pdp_meta_description, :string
       end
 
       Spree::BaseHelper.module_eval do

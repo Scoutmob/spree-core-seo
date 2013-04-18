@@ -7,6 +7,7 @@ module Spree
         Spree::Config.set(:homepage_title => params[:preferences][:homepage_title] )
         Spree::Config.set(:homepage_meta_keywords => params[:preferences][:homepage_meta_keywords])
         Spree::Config.set(:homepage_meta_description => params[:preferences][:homepage_meta_description])
+        Spree::Config.set(:pdp_meta_description => params[:preferences][:pdp_meta_description])
 
         respond_to do |format|
           format.html {
