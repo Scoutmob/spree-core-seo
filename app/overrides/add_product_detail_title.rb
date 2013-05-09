@@ -4,7 +4,7 @@ Deface::Override.new virtual_path: "spree/products/show",
                      namespaced: true do
   <<-HTML
     <% if defined?(@product.title_tag) and @product.title_tag.present? %>
-      self.title = @product.title_tag
+      <% self.title = @product.title_tag %>
     <% end %>
   HTML
 end
