@@ -4,7 +4,7 @@ Deface::Override.new virtual_path: "spree/taxons/show",
                      namespaced: true do
   <<-HTML
     <% if defined?(@taxon.title_tag) and @taxon.title_tag.present? %>
-      self.title = @taxon.title_tag
+      <% self.title = @taxon.title_tag %>
     <% end %>
   HTML
 end
