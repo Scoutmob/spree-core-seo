@@ -32,10 +32,6 @@ module SpreeCoreSeo
           end
         end
       end
-
-      Spree::Product.class_eval do
-        attr_accessible :title_tag if Spree::Product.column_names.include?('title_tag')
-      end
     end
 
     config.to_prepare &method(:activate).to_proc
