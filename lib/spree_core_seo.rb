@@ -33,8 +33,8 @@ module SpreeCoreSeo
         end
       end
 
-      Spree::Product.class_eval do
-        attr_accessible :title_tag if Spree::Product.column_names.include?('title_tag')
+      Dir.glob(File.join(File.dirname(__FILE__), "../../app/**/*_decorator*.rb")) do |c|
+        Rails.env.production? ? require(c) : load(c)
       end
     end
 
